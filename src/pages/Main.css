@@ -451,3 +451,11 @@ input {
 input::placeholder {
 	color: #999
 }
+
+.chat-sender-message{
+	text-align: right;
+}
+
+.chat-receiver-message{
+	text-align: left;
+}

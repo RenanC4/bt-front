@@ -30,6 +30,7 @@ export default function Main({ match, history }) {
 			setMyElo(images('./unranked.png')) :
 			setMyElo(images('./' + response.data.rank[0].tier + '.png'))
 		setMyUser(response.data)
+		console.log(response.data)
 		setTags(response.data.tags)
 		setBio(response.data.bio)
 		setTeams(response.data.teams)
@@ -116,8 +117,10 @@ export default function Main({ match, history }) {
 	function openTeam(_id) {
 		history.push(`/team/${_id}`)
 	}
-	function openChat(myId, friendId) {
-		history.push(`/chat/${myId}/${friendId}`)
+	function openChat(friendName, friendId) {
+		history.push(`/chat/${myUser._id}/${friendId}`,
+		[friendName, myUser.name]
+		)
 	}
 
 	return (
@@ -278,7 +281,7 @@ export default function Main({ match, history }) {
 											<div className="friend-card">
 											<FaTrash className="friend-request-deny" onClick={() => { removeSolicitation(friend._id) }} />
 												<span className="dot"></span>
-												<span onClick={()=>{openChat(friend._id, myUser._id)}}>{friend.username}</span>
+												<span onClick={()=>{openChat(friend.username, friend._id)}}>{friend.username}</span>
 											</div>
 										</li>
 									))}

@@ -57,7 +57,7 @@ export default function Main({ match, history }) {
 		(async function(){
 			const params = {offset: usersOffset}
 			const foundUsers = await api.get('users/', { params })
-			setUsersOffset(foundUsers.data.offset)
+			//setUsersOffset(foundUsers.data.offset)
 			foundUsers.data.users.map((foundUser, index)=>{
 				if(foundUser._id === myUser._id){
 					foundUsers.data.users.splice(index, 1)

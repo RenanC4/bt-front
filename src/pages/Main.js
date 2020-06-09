@@ -115,7 +115,9 @@ export default function Main({ match, history }) {
 		}).then(()=> userInfo())
 	}
 	function openTeam(_id) {
-		history.push(`/team/${_id}`)
+		history.push(`/team/${_id}`,
+		[teams]
+		)
 	}
 	function openChat(friendName, friendId) {
 		history.push(`/chat/${myUser._id}/${friendId}`,

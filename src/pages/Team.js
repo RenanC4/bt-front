@@ -19,7 +19,6 @@ useEffect(()=>{
 			<div className='profile-card'>
 				<span>Meus Times</span>
 			</div>
-
 			<div className='teams-card'>
 				<div className="user-teams">
 					{teams.length > 0 ? (<ul>
@@ -33,8 +32,19 @@ useEffect(()=>{
 				</div>
 			</div>
 		</div>
-		<div className='search'>
+		<div className='team'>
+			<div className="title-name">
+				<span>Nome do time</span>
+			</div>
 
+			<div className="main-class">
+				<div className="teams-buttons">
+					<span>buttons</span>
+				</div>
+				<div className="editTeam">
+					editando
+				</div>
+			</div>
 		</div>
 
 	</div>

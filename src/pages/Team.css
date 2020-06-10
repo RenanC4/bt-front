@@ -61,6 +61,11 @@ height:100%;
 	align-items: center;
 	flex-direction: column;
 }
+.title-name span {
+	font-size: 20pt;
+	color: #777;
+	font-weight: bolder;
+}
 .main-class{
 	display: flex;
 	flex-direction: row;

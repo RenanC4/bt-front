@@ -5,6 +5,7 @@ import logo from '../assets/logo.png'
 export default function Team({match, history }) {
 
 	const [teams, setTeams] = useState({})
+	const [teamNameStatus, setTeamNameStatus] = useState('DEFAULT')
 
 useEffect(()=>{
 	console.log(history.location.state[0])
@@ -13,6 +14,13 @@ useEffect(()=>{
 	function openTeam(_id) {
 		history.push(`/team/${_id}`)
 	}
+
+	async function handleSubmit(event) {
+		event.preventDefault()
+		setTeamNameStatus('DEFAULT')
+		console.log('a')
+	}
+
 	return (
 		<div className='main-container'>
 		<div className='my-profile'>
@@ -34,7 +42,22 @@ useEffect(()=>{
 		</div>
 		<div className='team'>
 			<div className="title-name">
-				<span>Nome do time</span>
+			{teamNameStatus === 'EDITING' ? (
+									<form onSubmit={handleSubmit}>
+										<textarea
+											placeholder="Digie o nome do time"
+											//value={bio}
+											maxlength='135'
+											onChange={event => console.log(event.target.value)}
+										/>
+										<div className='salvarButton'>
+											<button type="submit">Salvar</button>
+										</div>
+									</form>
+								) : (
+										<span onClick={() => setTeamNameStatus('EDITING')}> Nome do time {}</span>
+									)
+								}
 			</div>
 
 			<div className="main-class">

@@ -24,7 +24,7 @@ useEffect(()=>{
 	return (
 		<div className='main-container'>
 		<div className='my-profile'>
-			<div className='profile-card'>
+			<div className='title-card'>
 				<span>Meus Times</span>
 			</div>
 			<div className='teams-card'>

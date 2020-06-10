@@ -39,15 +39,15 @@ height:100%;
 .user-teams ul:hover{
 	cursor: pointer;
 }
-.profile-card span{
+.title-card span{
 	font-size: 21pt;
 	color: #777;
 }
 
-
 .team {
 	background-color: rgb(250, 245, 245);
 	display: flex;
+	flex-grow: 2;
 	min-width: 750px;
 	flex-direction: column;
 	align-items: center;

@@ -25,7 +25,7 @@ export default function Team({ match, history }) {
 
 	useEffect(() => {
 		//console.log(history.location.state[0])
-		setTeams([{ id: 1, name: 'batata' }, { id: 1, name: 'batata' }, { id: 1, name: 'batata' }])
+		setTeams([{ id: 1, name: 'teamOne' }, { id: 1, name: 'Invictus' }, { id: 1, name: 'NAVY' }])
 		const images = require.context('../assets', true);
 		setRoles(images('./Roles.png'))
 	}, [])
